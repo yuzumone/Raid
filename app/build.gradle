@@ -5,6 +5,9 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
+    dataBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "net.yuzumone.raid"
         minSdkVersion 21
