@@ -5,4 +5,5 @@
     <string name="fragment_update_blank_error">ポケモンと終了時間は必須です</string>
     <string name="ok">OK</string>
     <string name="close">閉じる</string>
+    <string name="no_location">位置情報が登録されていません</string>
 </resources>
