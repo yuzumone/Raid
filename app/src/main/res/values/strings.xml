@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Raid</string>
+    <string name="pokemon">ポケモン</string>
+    <string name="player">参加者</string>
+    <string name="fragment_update_blank_error">ポケモンと終了時間は必須です</string>
+    <string name="ok">OK</string>
+    <string name="close">閉じる</string>
 </resources>

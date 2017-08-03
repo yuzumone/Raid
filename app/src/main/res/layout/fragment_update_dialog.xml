@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+        <variable
+            name="raid"
+            type="net.yuzumone.raid.model.Raid"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
+
+        <EditText
+            android:id="@+id/edit_pokemon"
+            android:labelFor="@+id/edit_pokemon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:drawableStart="@drawable/ic_pokeball"
+            android:drawablePadding="16dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:hint="@string/pokemon"
+            android:background="#00000000"
+            android:text="@{raid.pokemon}"
+            />
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:layout_below="@+id/edit_pokemon"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:text='@{raid.time.equals("") ? "00:00" : raid.time}'
+            />
+
+        <EditText
+            android:id="@+id/edit_player"
+            android:labelFor="@+id/edit_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_time"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="16dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:hint="@string/player"
+            android:background="#00000000"
+            android:text="@{`` + raid.player}"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+</layout>
