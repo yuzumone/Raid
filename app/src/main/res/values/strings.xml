@@ -6,4 +6,7 @@
     <string name="ok">OK</string>
     <string name="close">閉じる</string>
     <string name="no_location">位置情報が登録されていません</string>
+    <string name="no_internet">ネットワークに接続していません</string>
+    <string name="morioka">盛岡</string>
+    <string name="takizawa">滝沢</string>
 </resources>
