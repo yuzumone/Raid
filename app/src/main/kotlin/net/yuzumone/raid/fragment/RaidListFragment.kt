@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,9 +16,8 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.database.*
 import net.yuzumone.raid.R
 import net.yuzumone.raid.databinding.FragmentRaidListBinding
-import net.yuzumone.raid.databinding.ItemRaidBinding
 import net.yuzumone.raid.model.Raid
-
+import net.yuzumone.raid.viewholder.RaidViewHolder
 
 
 abstract class RaidListFragment : Fragment() {
@@ -55,10 +53,6 @@ abstract class RaidListFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         adapter.cleanup()
-    }
-
-    class RaidViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val binding: ItemRaidBinding = DataBindingUtil.bind<ItemRaidBinding>(itemView)
     }
 
     class RaidAdapter(val context: Context, query: Query) : FirebaseRecyclerAdapter<Raid, RaidViewHolder>
