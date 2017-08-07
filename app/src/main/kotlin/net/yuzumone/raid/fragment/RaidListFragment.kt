@@ -75,7 +75,12 @@ abstract class RaidListFragment : Fragment() {
                         val uri = Uri.parse("geo:0,0?q=$lat,$lng($place)")
                         val intent = Intent(Intent.ACTION_VIEW, uri)
                         intent.`package` = "com.google.android.apps.maps"
-                        context.startActivity(intent)
+                        if (intent.resolveActivity(context.packageManager) != null) {
+                            context.startActivity(intent)
+                        } else {
+                            Toast.makeText(context, context.getString(R.string.no_map_application),
+                                    Toast.LENGTH_SHORT).show()
+                        }
                     } else {
                         Toast.makeText(context, context.getString(R.string.no_location),
                                 Toast.LENGTH_SHORT).show()

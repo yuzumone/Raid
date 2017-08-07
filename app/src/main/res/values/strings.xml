@@ -9,4 +9,5 @@
     <string name="no_internet">ネットワークに接続していません</string>
     <string name="morioka">盛岡</string>
     <string name="takizawa">滝沢</string>
+    <string name="no_map_application">マップアプリがありません</string>
 </resources>
