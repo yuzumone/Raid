@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import com.google.firebase.analytics.FirebaseAnalytics
 import net.yuzumone.raid.databinding.ActivityMainBinding
@@ -36,6 +38,20 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, getString(R.string.no_internet), Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.menu_notification -> {
+                PrefActivity.createIntent(this)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun isDeviceOnline(): Boolean {

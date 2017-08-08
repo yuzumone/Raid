@@ -10,4 +10,6 @@
     <string name="morioka">盛岡</string>
     <string name="takizawa">滝沢</string>
     <string name="no_map_application">マップアプリがありません</string>
+    <string name="preference_notification">通知設定</string>
+    <string name="fragment_pref_save">保存</string>
 </resources>
