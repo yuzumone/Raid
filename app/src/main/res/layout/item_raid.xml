@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_place"
-            android:text="@{`ポケモン: ` + raid.pokemon}"
+            android:text="@{@string/pokemon + `: ` + raid.pokemon}"
             />
 
         <TextView
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_pokemon"
-            android:text="@{`終了時間: ` + raid.time}"
+            android:text="@{@string/end_time + `: ` + raid.time}"
             />
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text_time"
-            android:text="@{`参加者: ` + raid.player + `人`}"
+            android:text="@{@string/player + `: ` + raid.player}"
             />
     </RelativeLayout>
 </layout>
