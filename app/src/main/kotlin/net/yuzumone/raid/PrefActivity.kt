@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import net.yuzumone.raid.databinding.FragmentPrefBinding
+import net.yuzumone.raid.util.PrefUtil
 
 class PrefActivity : AppCompatActivity() {
 
@@ -33,9 +34,15 @@ class PrefActivity : AppCompatActivity() {
         override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                                   savedInstanceState: Bundle?): View? {
             binding = DataBindingUtil.inflate(inflater, R.layout.fragment_pref, container, false)
+            val prefs = PrefUtil(activity)
             binding.morioka.title.text = getString(R.string.morioka)
+            binding.morioka.checkbox.isChecked = prefs.isMoriokaNotification
             binding.takizawa.title.text = getString(R.string.takizawa)
+            binding.takizawa.checkbox.isChecked = prefs.isTakizawaNotification
             binding.buttonSave.setOnClickListener {
+                prefs.isMoriokaNotification = binding.morioka.checkbox.isChecked
+                prefs.isTakizawaNotification = binding.takizawa.checkbox.isChecked
+                activity.finish()
                 // TODO
             }
             return binding.root
