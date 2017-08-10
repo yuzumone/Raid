@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import net.yuzumone.raid.databinding.FragmentPrefBinding
@@ -23,8 +24,19 @@ class PrefActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val fragment = PrefFragment()
         supportFragmentManager.beginTransaction().add(android.R.id.content, fragment).commit()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     class PrefFragment : Fragment() {
