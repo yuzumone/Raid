@@ -42,6 +42,7 @@ dependencies {
     compile "com.android.support:recyclerview-v7:$support_lib_version"
     compile "com.google.firebase:firebase-database:$firebase_lib_version"
     compile "com.google.firebase:firebase-analytics:$firebase_lib_version"
+    compile "com.google.firebase:firebase-messaging:$firebase_lib_version"
     compile 'com.firebaseui:firebase-ui-database:2.2.0'
     kapt 'com.android.databinding:compiler:2.3.3'
 }

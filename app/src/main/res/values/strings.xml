@@ -13,4 +13,5 @@
     <string name="preference_notification">通知設定</string>
     <string name="fragment_pref_save">保存</string>
     <string name="end_time">終了時間</string>
+    <string name="channel_id">raid_notification</string>
 </resources>

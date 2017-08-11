@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import com.google.firebase.messaging.FirebaseMessaging
 import net.yuzumone.raid.databinding.FragmentPrefBinding
 import net.yuzumone.raid.util.PrefUtil
 
@@ -54,8 +55,17 @@ class PrefActivity : AppCompatActivity() {
             binding.buttonSave.setOnClickListener {
                 prefs.isMoriokaNotification = binding.morioka.checkbox.isChecked
                 prefs.isTakizawaNotification = binding.takizawa.checkbox.isChecked
+                if (binding.morioka.checkbox.isChecked) {
+                    FirebaseMessaging.getInstance().subscribeToTopic("morioka")
+                } else {
+                    FirebaseMessaging.getInstance().unsubscribeFromTopic("morioka")
+                }
+                if (binding.takizawa.checkbox.isChecked) {
+                    FirebaseMessaging.getInstance().subscribeToTopic("takizawa")
+                } else {
+                    FirebaseMessaging.getInstance().unsubscribeFromTopic("takizawa")
+                }
                 activity.finish()
-                // TODO
             }
             return binding.root
         }
