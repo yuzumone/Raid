@@ -3,6 +3,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-kapt'
 
+def getSecretProperty(name) {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('secret.properties').newDataInputStream())
+    return properties.getProperty(name.toString())
+}
+
+def KEY = "\"${getSecretProperty('KEY')}\""
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
@@ -16,6 +24,7 @@ android {
         versionCode 2
         versionName "1.0.1"
         multiDexEnabled true
+        buildConfigField 'String', 'KEY', KEY
     }
     buildTypes {
         release {
