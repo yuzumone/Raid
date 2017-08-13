@@ -14,4 +14,8 @@
     <string name="fragment_pref_save">保存</string>
     <string name="end_time">終了時間</string>
     <string name="channel_id">raid_notification</string>
+    <string name="fragment_raid_list_notification_error">レイド情報を先に登録してください</string>
+    <string name="fragment_notification_dialog_title">レイド通知を送信しますか？</string>
+    <string name="raid_information">レイド情報</string>
+    <string name="notification_body">場所: %1$s, ポケモン: %2$s</string>
 </resources>

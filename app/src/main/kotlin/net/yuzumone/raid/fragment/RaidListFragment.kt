@@ -67,6 +67,20 @@ abstract class RaidListFragment : Fragment() {
                     val manager = (context as AppCompatActivity).supportFragmentManager
                     fragment.show(manager, "update")
                 }
+                binding.iconNotification.setOnClickListener {
+                    val place = model.place
+                    val pokemon = model.pokemon
+                    val address = model.address
+                    if (pokemon != "") {
+                        val fragment = NotificationDialogFragment
+                                .newInstance(place!!, pokemon!!, address!!)
+                        val manager = (context as AppCompatActivity).supportFragmentManager
+                        fragment.show(manager, "notification")
+                    } else {
+                        val msg = context.getString(R.string.fragment_raid_list_notification_error)
+                        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+                    }
+                }
                 binding.container.setOnLongClickListener {
                     if (model.lat != "" && model.lng != "") {
                         val place = model.place

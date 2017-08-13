@@ -23,6 +23,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{raid.place}"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/icon_notification"
             style="@style/TextAppearance.AppCompat.Title"
             />
 
@@ -48,6 +50,18 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/text_time"
             android:text="@{@string/player + `: ` + raid.player}"
+            />
+
+        <ImageView
+            android:id="@+id/icon_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_notifications"
+            android:padding="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             />
     </RelativeLayout>
 </layout>
