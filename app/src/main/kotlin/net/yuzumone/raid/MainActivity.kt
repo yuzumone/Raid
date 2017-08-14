@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.androidnetworking.AndroidNetworking
 import com.google.firebase.analytics.FirebaseAnalytics
 import net.yuzumone.raid.databinding.ActivityMainBinding
 import net.yuzumone.raid.fragment.MoriokaRaidFragment
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         analytics = FirebaseAnalytics.getInstance(this)
+        AndroidNetworking.initialize(applicationContext)
         if (savedInstanceState == null) {
             if (isDeviceOnline()) {
                 val adapter = ViewPagerAdapter(supportFragmentManager)
