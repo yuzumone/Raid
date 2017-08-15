@@ -33,3 +33,5 @@
 -keepclassmembers class  net.yuzumone.raid.model.** {
   *;
 }
+
+-dontwarn okio.**
