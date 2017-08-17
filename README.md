@@ -3,7 +3,7 @@
 [![language kotlin](https://img.shields.io/badge/language-kotlin-green.svg)](#)
 [![minSdkVersion 21](https://img.shields.io/badge/minSdkVersion-21-red.svg)](#)
 [![compileSdkVersion 25](https://img.shields.io/badge/compileSdkVersion-25-yellow.svg)](#)
-[![version v1.0.0](https://img.shields.io/badge/version-v1.0.0-blue.svg)](#)
+[![version v1.1.0](https://img.shields.io/badge/version-v1.1.0-blue.svg)](#)
 
 ## 特徴
 - レイドの情報をシェア
@@ -11,9 +11,10 @@
   * 終了時間
   * 参加人数
 - ジムの場所を確認
+- 通知
 
 ## ダウンロード
-[APK](https://github.com/yuzumone/Raid/releases/download/v1.0.0/app-release.apk)
+[APK](https://github.com/yuzumone/Raid/releases/download/v1.1.0/app-release.apk)
 
 ## ライブラリ
 以下のライブラリを使っています．
@@ -23,6 +24,7 @@
 - Android Data Binding compiler
 - [Firebase](https://firebase.google.com/docs/libraries/)
 - [FirebaseUI-Android](https://github.com/firebase/FirebaseUI-Android)
+- [Fast-Android-Networking](https://github.com/amitshekhariitbhu/Fast-Android-Networking)
 
 ## ライセンス
 ```
