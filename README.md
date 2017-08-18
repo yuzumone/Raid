@@ -13,6 +13,11 @@
 - ジムの場所を確認
 - 通知
 
+## スクリーンショット
+| メイン画面 | 登録画面 | 通知設定 |
+| --- | --- | --- |
+| ![](./screenshots/main.png) | ![](./screenshots/register.png) | ![](./screenshots/notification.png) |
+
 ## ダウンロード
 [APK](https://github.com/yuzumone/Raid/releases/download/v1.1.0/app-release.apk)
 
